@@ -1,0 +1,126 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+*{
+  outline: none;
+}
+.valid{
+  border-color: green;
+  color: green;
+}
+.invalid{
+  border-color: red;
+  color: red;
+}
+.content{
+  width: 100%;
+  height: 100vh;
+  &-start{
+    margin: 50px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-input{
+      width: 200px;
+      padding: 10px 5px;
+      border-radius: 20px;
+      margin: 0 auto 20px;
+      border: 1px solid black;
+      text-align: center;
+    }
+    &-btn{
+      padding: 9px 0;
+      text-transform: uppercase;
+      background: #000000;
+      color: #ffffff;
+      width: 212px;
+      border: 1px solid #000000;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: auto;
+      transition: .3s;
+      &:hover,&:disabled{
+        opacity: 0.7;
+      }
+    }
+  }
+  &-table{
+    margin: 0 auto 40px;
+    &-td{
+      width: 25px;
+      height: 25px;
+      background: blue;
+      border: 1px solid mediumblue;
+      cursor: pointer;
+    }
+  }
+}
+#active{
+  background: yellow;
+  border: 1px solid yellow;
+}
+#loose{
+  background: red;
+  border: 1px solid red;
+}
+.players{
+  display: flex;
+  width: 300px;
+  margin: auto;
+  p{
+    width: 50%;
+    text-align: center;
+    margin: 10px 0;
+    span{
+      margin-left: 10px;
+    }
+  }
+}
+.popup{
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0, 0.7);
+  &-content{
+    width: 300px;
+    position: absolute;
+    background: white;
+    z-index: 3;
+    left: 50%;
+    border-radius: 5px;
+    top: 50%;text-align: center;
+    transform: translate(-50%,-50%);
+    &-text{
+      margin: 20px 0 20px;
+      font-size: 16px;
+    }
+  }
+  &-btn{
+    margin: 10px 0 20px;
+    background: black;
+    border: 1px solid black;
+    color: #ffffff;
+    padding: 9px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}
+.results{
+  width: 120px;
+  height: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #000000;
+  position: relative;
+  display: block;
+  margin: 20px auto 0;
+}
